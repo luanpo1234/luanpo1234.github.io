@@ -58,11 +58,7 @@ body{
     justify-content: center;
 }
 
-.title-section h1 {
-
-}
-
-.title-section{
+#title-section{
 	width: 90%;
 	/* padding: 10vh; */
 	margin: auto;
@@ -91,7 +87,7 @@ body{
 	flex:1;
 }
 
-.list-skills {
+#list-skills {
 	/* line-height: 27px;
 	font-size: 18px; */
 	padding: var(--padding-default);
