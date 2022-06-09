@@ -62,7 +62,7 @@ h1 {
 
 main hr {
 	margin:30px auto;
-	width: 90%;
+	width: 57vw;
 	height: 1px;
 	color: silver;
 }
@@ -73,6 +73,9 @@ ul li {
 	margin: 0 0 1em 1em;
 }
 
+.toggle-hr {
+	display: none;
+}
 
 #profile {
 	height: 250px;
@@ -184,7 +187,7 @@ button,  input, select, textarea {
 /*footer source: https://codepen.io/scanfcode/pen/MEZPNd*/
 .site-footer
 {
-  margin: 20px auto;
+  margin: 20px auto 20px 0;
   background-color: var(--dark-green);
   padding: var(--padding-default);
   padding-top: 20px;
@@ -236,6 +239,14 @@ button,  input, select, textarea {
 	.main-container {
 		width: 100vw;
 		margin: auto;
+	}
+
+	.site-footer {
+		margin: 20px auto 0 auto;
+	}
+
+	.toggle-hr{
+		display: block;
 	}
 }
 
