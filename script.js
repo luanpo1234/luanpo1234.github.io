@@ -19,7 +19,7 @@ const languages = {
 	<h2>Deutsch &lrarr; Portugiesisch in Leipzig</h2>`,
 
     "list-skills": `<ul>
-	<li>Staatlich geprüfter und beeidigter Übersetzer mit <strong>über 10 Jahre Erfahrung</strong>        in verschiedenen Bereichen.</li>       <li>Zusammenarbeit mit zahlreichen Übersetzungsagenturen.</li>
+	<li>Staatlich geprüfter und beeidigter Übersetzer mit <strong>über 10 Jahren Erfahrung</strong>        in verschiedenen Bereichen.</li>       <li>Zusammenarbeit mit zahlreichen Übersetzungsagenturen.</li>
 	<li>Beglaubigte Übersetzung von <strong>Urkunden, Verträgen</strong> u.a.</li>
 	<li>Schnell und zuverlässig mit Sitz in <strong>Leipzig-Lindenau</strong>.</li>
 	</ul>`,
