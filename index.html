@@ -9,15 +9,24 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie-edge" />
   <link href="style.css" rel="stylesheet" />
+  
   <title>Landing page</title>
 </head>
 <body>
-  <main>
-  <header class="header">
-  <ul>
-	<li>  <a href="#" onclick="setLanguage('de')">Deutsch</a> </li>
-	<li> <a href="#" onclick="setLanguage('pt')">Português</a> </li>
-  </ul>
+  <div id="main-container" class="main-container" lang="de">
+  <header class="header flex">
+
+    <!--- Links -->
+
+    <ul id="links-top">
+      <li> <a href="index.html">
+        <img src="img/home_icon.png" alt="Home" class="home-icon">
+      </a> </li>
+      <li></li>
+      <li>  <a href="#" onclick="setLanguage('de')">Deutsch</a> </li>
+      <li> <a href="#" onclick="setLanguage('pt')">Português</a> </li>
+      
+      </ul>
 
     <div id="title-section">
       <h1>Beglaubigte Übersetzungen</h1>
@@ -26,14 +35,18 @@
       
     </div>
     </header>
-  <section class="main-section">
-    <div class="content-left">
+    <main>
+      
+      <!-- top section -->
+
+  <div id="top-section" class="flex">
+    <div class="content-left flex">
     <div class="name">
       <h2>Luan Orsini</h2>
     </div>
-        <div class="img-skills">
-          <div class="profile-image">
-      <img src="img/1.jpg" alt="Luan Orsini" />
+        <div id="img-skills" class="flex">
+          <div id="profile-image">
+      <img src="img/1.jpg" id="profile" alt="Luan Orsini" />
           </div>
       <div id="list-skills">
         <ul>
@@ -47,35 +60,54 @@
       </div>
         </div>
     </div>
+    
+    <!-- Form section -->
     <div class="content-right">
-      <h2>Anfrage</h2>
-
+      <h2 id="contact">Anfrage</h2>
       <div class="container">
-        <form action="action_page.php">
-      
-          <label for="name">Name</label>
-          <input type="text" id="name" name="name" placeholder="Name">
-          <br />
-      
-          
-          <label for="email">E-Mail</label>
-          <input type="text" id="email" name="email" placeholder="E-Mail">
-          <br />
-
-          <textarea id="nachricht" name="nachricht" placeholder="Nachricht" style="height:200px"></textarea>
-          <br />
-
-          <input type="submit" value="Absenden">
-      
-        </form>
-      </div> 
-
-    </div>
-  </section>
-    <main/>
-    <section class="contact">
-    </section>
-	<script src="script.js"></script>
+<form
+  action="https://formspree.io/f/moqrbdbj"
+  method="POST"
+>
+<label id="name">
+</label>
+<input type="name" name="name">
+  <label id="email">
+    E-Mail:
+  </label>
+    <input type="email" name="email">
+  <label id="message">
+    Nachricht:
+  </label>
+    <textarea name="message"></textarea>
   
+  <button type="submit" id="submit">Absenden</button>
+</form>
+      </div> 
+    </div>
+  </div>
+  <!-- end of top section-->
+
+   
+    <div id="secondary-content"> 
+</div>
+
+    <main/>
+
+  <!-- Site footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <ul>
+      <li><a href="impressum.html">Impressum</a></li>
+      <li><a href="datenschutz.html">Datenschutzerklärung</a></li>
+      <li><a href="index.html">Home</a></li>
+    </ul>
+    <hr />
+    <p>Website erstellt von Luan de Paiva Orsini.</p>
+    </div>
+</footer>
+
+	<script src="script.js"></script>
+</div>
 </body>
 </html>
