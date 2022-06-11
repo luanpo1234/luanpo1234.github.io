@@ -105,30 +105,3 @@ function populateLang(){
 }
 
 setLanguage(defaultLang);
-
-//Tentando resolver como usar essa função
-/* async function loadLangJSON() {
-	try {
-		const response = await fetch("language/langs.json");
-		const langData = await response.json();
-		return langData;
-	} catch(err) {
-		console.error(`Error loading JSON: ${err}`);
-		return 5;
-	}
-}
-
-let teste;
-
-(async () => {
-	teste = await loadLangJSON()
-  })();
-
-  console.log(teste);
-
- if (!teste){
-	teste= 5;
- }
-
-console.log(`será ${teste}?`);
- */
