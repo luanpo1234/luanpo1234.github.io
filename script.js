@@ -1,3 +1,13 @@
+async function loadLangJSON() {
+	try {
+		const response = await fetch("language/langs.json");
+		return response;
+	} catch(err) {
+		console.error(`THIS IS THE Error: ${err}`);
+	}
+}
+
+loadLangJSON();
 const mainContainerId="main-container";
 const defaultLang = "de";
 

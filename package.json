@@ -1,0 +1,23 @@
+{
+  "name": "js_translator_profile",
+  "version": "1.0.0",
+  "description": "",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/luanpo1234/luanpo1234.github.io.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/luanpo1234/luanpo1234.github.io/issues"
+  },
+  "homepage": "https://github.com/luanpo1234/luanpo1234.github.io#readme",
+  "dependencies": {
+    "fetch": "^1.1.0"
+  }
+}
