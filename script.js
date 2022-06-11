@@ -55,6 +55,7 @@ async function loadLangJSON() {
 	try {
 		const response = await fetch("language/langs.json");
 		const langData = await response.json();
+		console.log("JSON loaded");
 		return langData;
 	} catch(err) {
 		console.error(`Error loading JSON: ${err}`);
@@ -64,7 +65,8 @@ async function loadLangJSON() {
 let jsonData;
 
 (async () => {
-	jsonData = await loadLangJSON()
+	jsonData = await loadLangJSON();
+	console.log("JSON data;");
   })();
 
 const languages = jsonData || languageDict;
@@ -74,8 +76,8 @@ localStorage.setItem('language', defaultLang);
 
 //Function to change language str in local storage
 function setLanguage(lang) {
-localStorage.setItem('language', lang);
-populateLang();
+	localStorage.setItem('language', lang);
+	populateLang();
 }
 
 let test = document.getElementById("main-container");
