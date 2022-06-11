@@ -1,14 +1,4 @@
-//Tentando resolver como usar essa função
-/* async function loadLangJSON() {
-	try {
-		const response = await fetch("language/langs.json");
-		return response;
-	} catch(err) {
-		console.error(`Error loading JSON: ${err}`);
-	}
-} */
-
-const mainContainerId="main-container";
+const mainContainerId= "main-container";
 const defaultLang = "de";
 
 const altSecondaryContent = `<h2>Mehr Informationen</h2>
@@ -21,7 +11,7 @@ Kunden entgegenzukommen und eine befriedigende Lösung zu finden.</p>
 <p>Ich arbeite mit den neuesten Übersetzungsprogrammen, die mir ermöglichen, auch in sehr
 langfristige Projekte immer die Einheitlichkeit in der Sprachnutzung zu bewahren.</p>`
 
-const languages = {
+const languageDict = {
 	"de" : 
 { 
     "title-section": `
@@ -61,6 +51,24 @@ const languages = {
 }
 };
 
+async function loadLangJSON() {
+	try {
+		const response = await fetch("language/langs.json");
+		const langData = await response.json();
+		return langData;
+	} catch(err) {
+		console.error(`Error loading JSON: ${err}`);
+	}
+}
+
+let jsonData;
+
+(async () => {
+	jsonData = await loadLangJSON()
+  })();
+
+const languages = jsonData || languageDict;
+
 //Setting default language in localStorage
 localStorage.setItem('language', defaultLang);
 
@@ -95,3 +103,30 @@ function populateLang(){
 }
 
 setLanguage(defaultLang);
+
+//Tentando resolver como usar essa função
+/* async function loadLangJSON() {
+	try {
+		const response = await fetch("language/langs.json");
+		const langData = await response.json();
+		return langData;
+	} catch(err) {
+		console.error(`Error loading JSON: ${err}`);
+		return 5;
+	}
+}
+
+let teste;
+
+(async () => {
+	teste = await loadLangJSON()
+  })();
+
+  console.log(teste);
+
+ if (!teste){
+	teste= 5;
+ }
+
+console.log(`será ${teste}?`);
+ */
