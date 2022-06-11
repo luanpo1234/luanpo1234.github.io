@@ -1,5 +1,4 @@
-const mainContainerId= "main-container";
-const defaultLang = "de";
+const defaultLang = document.documentElement.getAttribute("lang") || "de";
 
 const altSecondaryContent = `<h2>Mehr Informationen</h2>
 <p>Ich lege viel Wert auf Qualität und arbeite mit dem 4-Augen-Prinzip, d.h. die 
@@ -38,7 +37,7 @@ const languageDict = {
 	<li>Master in Interkultureller Kommunikation an der Europa-Universität Viadrina</li>
 	<li>Post-Graduate Certificate in Translation an der University of Portsmouth</li>`
 },
-"pt" : 
+"pt-BR" : 
 { 
     "title-section": "      <h1>Traduções juramentadas</h1>      <h2>Alemão &lrarr; Português em Leipzig</h2>",
     "list-skills": " <ul>        <li>Tradutor juramentado com           <strong>mais de 10 anos de experiência</strong>         em várias áreas.</li>       <li>Colaboração com diversas agências de tradução.</li>       <li>Tradução juramentada de <strong>certificados, certidões e contratos, </strong> entre outros.</li>       <li>Trabalho rápido e confiável em <strong>Leipzig-Lindenau</strong>.</li>     </ul>",
@@ -80,11 +79,6 @@ function setLanguage(lang) {
 	populateLang();
 }
 
-let test = document.getElementById("main-container");
-console.log(test);
-document.getElementById("main-container").lang="pt-BR";
-console.log(test);
-
 /*Accesses language str in local storage, populates HTML with 
 the language using the data in `languages`.*/
 function populateLang(){
@@ -97,7 +91,9 @@ function populateLang(){
 		}
 	};
 	// Setting content language to localStorage.language
-	let test = document.getElementById(mainContainerId).lang=localStorage.language;
+	document.documentElement.setAttribute("lang", localStorage.language);
+	console.log(localStorage.language);
+	console.log(document.documentElement.getAttribute("lang"));
 	//Selecting all id elements and changing innerHTML using helper function above.
 	let idElmts = document.querySelectorAll('*[id]');
 	Object.keys(idElmts).map(
