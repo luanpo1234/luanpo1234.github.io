@@ -266,6 +266,10 @@ de centralizado + sem padding */
 }
 
 @media only screen and (min-width: 600px) {
+	.header {
+		padding: var(--padding-default);
+		padding-top: 20px;
+	}
 	.site-footer p
 	{
 	padding-left: 70px;
