@@ -94,6 +94,7 @@ button {
 }
 .header{
 	/* background: rgb(2,0,36); */
+	padding-top: 20px;
 	display: flex;
 	background: linear-gradient(33deg, #f3ef10 0%,   #7b9e29 70%,  #19912b 100%);
 	margin: auto;
